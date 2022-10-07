@@ -1,0 +1,30 @@
+{
+  "name": "es6-bases",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "proyecto de aprendizaje para es6",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/juanarodriguez02/es6-bases.git"
+  },
+  "keywords": [
+    "arreglos",
+    "funciones",
+    "objetos"
+  ],
+  "author": "Juana Rodriguez",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/juanarodriguez02/es6-bases/issues"
+  },
+  "homepage": "https://github.com/juanarodriguez02/es6-bases#readme",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "nodemon": "^2.0.20"
+  }
+}
