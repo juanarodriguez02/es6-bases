@@ -1,12 +1,12 @@
 {
-  "name": "es6-bases",
-  "type": "module",
+  "name": "c",
+  "type": "commonjs",
   "version": "1.0.0",
   "description": "proyecto de aprendizaje para es6",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "dev": "nodemon index.js"
+    "dev": "nodemon async/3_callback_request.js"
   },
   "repository": {
     "type": "git",
@@ -25,6 +25,9 @@
   "homepage": "https://github.com/juanarodriguez02/es6-bases#readme",
   "dependencies": {
     "colors": "^1.4.0",
-    "nodemon": "^2.0.20"
+    "json-server": "^0.17.0",
+    "nodemon": "^2.0.20",
+    "request": "^2.88.2",
+    "xmlhttprequest": "^1.8.0"
   }
 }
