@@ -4,6 +4,7 @@ let endpoint = 'https://rickandmortyapi.com/api/character'
 
 const r = request(endpoint, {json: true}, function(err, response, data){
     data.results.forEach(element => {
+        console.log(`Url: ${element.url}`)
         console.log(`Tipo: ${element.name}`)
         console.log('+++++++++++++++++++')
     });
