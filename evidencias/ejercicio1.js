@@ -1,27 +1,25 @@
 //CALLBACK XML 
-//API STRANGHER THINGS 
 
 let XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
 
-let endpoint = 'https://strangerthings-quotes.vercel.app/api/quotes/7'
+let endpoint = 'https://urlhaus-api.abuse.ch/v1/urls/recent/'
 
-
-function exito(response){
-    console.log(JSON.parse(response))
+const exito = (response)=>{
+    const tipos = JSON.parse(response).urls
+    tipos.forEach((tipo)=>{
+        console.log(`Id: ${tipo.id}`)
+        console.log(`----------------`)
+    })
 }
 
-function fallo(status){
+const fallo = (status)=>{
     console.log(status)
 }
 
-function get_data(endpoint, exito, fallo){
-    //2.Se crea el objeto de conexión
+const get_data = (endpoint, exito, fallo)=>{
     let http = new XMLHttpRequest()
-    //3. abrir conexión a la API 
     http.open('get', endpoint)
-    //4. Enviar la solicitud(request) a la API
     http.send()
-    //5.Hacer el tratamiento de la response
     http.onload = function(){
         if(http.status === 200){
             exito(http.responseText)
@@ -31,5 +29,4 @@ function get_data(endpoint, exito, fallo){
     }
 }
 
-//Invocar la función get_data
 get_data(endpoint, exito, fallo)

@@ -1,22 +1,22 @@
-//AWAIT 
-//API GAME OF THRONES 
-
+//PROMISES AXIOS
+ 
 const axios = require('axios')
 
 let config = {
     method: 'get',
-    url: 'https://api.gameofthronesquotes.xyz/v1/random/5'
+    url: 'https://emojihub.herokuapp.com/api/all'
 }
 
-const f = async() => {
-    try {
-        let response = await axios(config)
-            console.log(response.name) 
-            console.log(`|||||||||||||||||||||`)
-        
-    } catch (error) {
+axios(config)
+    .then((response)=>{
+        return response.data
+    })
+    .then((data)=>{
+        data.forEach(element => {
+            console.log(`Nombre: ${element.name}`)
+            console.log(`-----------------------`)
+        })
+    })
+    .catch((error)=>{
         console.error(error)
-    }
-}
-
-f()
+    })

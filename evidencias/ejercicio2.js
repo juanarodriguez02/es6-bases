@@ -1,19 +1,20 @@
-//PROMISES NEEDLE 
-//API HARRY POTTER 
-
-//let endpoint = 'https://urlhaus-api.abuse.ch/v1/urls/recent/'
+//AWAIT NEEDLE 
 
 const needle = require('needle')
 
-const url = "https://hp-api.herokuapp.com/api/characters/students"
+let endpoint = 'https://hp-api.herokuapp.com/api/characters/students'
 
-needle('get',url)
-	.then((response)=>{
-		console.log(response)
-	})
-	.then((data) => {
-		console.log(data)
-	})
-	
-	.catch((e) => console.log(e))
+const f = async () => {
+    try {
+        let response= await needle('get',endpoint)
+        response.body.forEach((harry) => {
+            console.log(`Nombre: ${harry.name}`)
+			console.log(`Casa: ${harry.species}`)
+            console.log(`+++++++++++++++++++++++`)
+        });
+    } catch (error) {
+        console.log(error)
+    }
+}
 
+f()
