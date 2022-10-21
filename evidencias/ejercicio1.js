@@ -1,4 +1,5 @@
 //CALLBACK XML 
+//API STRANGHER THINGS 
 
 let XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
 
